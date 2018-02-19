@@ -1,6 +1,6 @@
 {
     "env": {
-        "NODE_ENV": "development",
+        "NODE_ENV": "alpha",
         "PORT": 5487
     },
     "env_production": {
