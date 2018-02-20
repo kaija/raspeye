@@ -63,7 +63,7 @@ router.post('/detect', function(req, res, next) {
   if (req.files.video && req.body.device) {
     s3Key = videoS3Path(req.body.device);
     jobId = uuidv4();
-    params = {Bucket: videoS3Bucket, Key: s3Key, Body: req.file.video.data};
+    params = {Bucket: videoS3Bucket, Key: s3Key, Body: req.files.video.data};
     s3.putObject(params, function(err, data){
       if (err) {
         console.log(err);
